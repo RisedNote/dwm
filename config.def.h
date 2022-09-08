@@ -15,9 +15,9 @@ static const char col_gray1[]       = "#363432";
 // inactive window border color
 static const char col_gray2[]       = "#363432";
 // font color
-static const char col_gray3[]       = "#252524";
+static const char col_gray3[]       = "#eeeeee";
 // current workspace and current window font color
-static const char col_gray4[]       = "#eeeeee";
+static const char col_gray4[]       = "#252524";
 // active window border
 static const char col_cyan[]        = "#F7C15D";
 
