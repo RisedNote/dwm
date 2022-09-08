@@ -19,7 +19,7 @@ static const char col_gray3[]       = "#bbbbbb";
 // current workspace and current window font color
 static const char col_gray4[]       = "#eeeeee";
 // active window border
-static const char col_cyan[]        = "#E0525C";
+static const char col_cyan[]        = "#F2C4C8";
 
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
@@ -70,27 +70,29 @@ static const Layout layouts[] = {
 /* commands */
 static const char *termcmd[]  = { "alacritty", NULL };
 static const char *roficmd[]  = { "rofi", "-show", "drun", NULL };
+static const char *firefox[]  = { "firefox", NULL };
 
 static const Key keys[] = {
 	/* modifier                     key              function              argument */
 	{ MODKEY,                       XK_r,            spawn,                {.v = roficmd } },
 	{ MODKEY,                       XK_Return,       spawn,                {.v = termcmd } },
-	{ MODKEY,                       XK_b,            togglebar,            {0} },
+	{ MODKEY,                       XK_b,            spawn,                {.v = firefox } },
+	{ MODKEY|ShiftMask,             XK_b,            togglebar,            {0} },
 	{ MODKEY,                       XK_j,            focusstack,           {.i = +1 } },
 	{ MODKEY,                       XK_k,            focusstack,           {.i = -1 } },
 	{ MODKEY,                       XK_i,            incnmaster,           {.i = +1 } },
 	{ MODKEY,                       XK_d,            incnmaster,           {.i = -1 } },
 	{ MODKEY,                       XK_h,            setmfact,             {.f = -0.05} },
 	{ MODKEY,                       XK_l,            setmfact,             {.f = +0.05} },
-	{ MODKEY,                       XK_Return,       zoom,                 {0} },
+	//{ MODKEY,                       XK_Return,       zoom,                 {0} },
 	{ ALTKEY,                       XK_Tab,          view,                 {0} },
 	{ MODKEY|ShiftMask,             XK_c,            killclient,           {0} },
 	{ MODKEY,                       XK_t,            setlayout,            {.v = &layouts[0]} },
-	{ MODKEY,                       XK_f,            setlayout,            {.v = &layouts[1]} },
-	{ MODKEY,                       XK_m,            setlayout,            {.v = &layouts[2]} },
-	{ MODKEY,                       XK_space,        setlayout,            {0} },
-	{ MODKEY|ShiftMask,             XK_space,        togglefloating,       {0} },
-	{ MODKEY,                       XK_0,            view,                 {.ui = ~0 } },
+	//{ MODKEY,                       XK_f,            setlayout,            {.v = &layouts[1]} },
+	//{ MODKEY,                       XK_m,            setlayout,            {.v = &layouts[2]} },
+	//{ MODKEY,                       XK_space,        setlayout,            {0} },
+	//{ MODKEY|ShiftMask,             XK_space,        togglefloating,       {0} },
+	//{ MODKEY,                       XK_0,            view,                 {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,            tag,                  {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,        focusmon,             {.i = -1 } },
 	{ MODKEY,                       XK_period,       focusmon,             {.i = +1 } },
