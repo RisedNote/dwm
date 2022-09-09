@@ -9,7 +9,7 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const int vertpad            = 10;       /* vertical padding of bar */
 static const int sidepad            = 10;       /* horizontal padding of bar */
 static const int focusonwheel       = 0;        /* click to focus */
-static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=15" };
+static const char *fonts[]          = { "JetBrainsMono Nerd Font Mono:size=15", "Noto Color Emoji:size=15" };
 /* background color */
 static const char col_gray1[]       = "#363432";
 // inactive window border color
